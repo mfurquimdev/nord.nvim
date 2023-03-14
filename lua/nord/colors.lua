@@ -1,7 +1,10 @@
 local named_colors = require("nord.named_colors")
 
 local dark_colors = {
+	nord0_gui_darkest = named_colors.darkest_black, -- out of palette
+	nord0_gui_dark = named_colors.dark_black, -- out of palette
 	nord0_gui = named_colors.black, -- nord0 in palette
+	nord0_gui_light = named_colors.light_black, -- out of palette
 	nord1_gui = named_colors.dark_gray, -- nord1 in palette
 	nord2_gui = named_colors.gray, -- nord2 in palette
 	nord3_gui = named_colors.light_gray, -- nord3 in palette
@@ -58,7 +61,7 @@ end
 if vim.g.nord_cursorline_transparent then
 	nord.cursorlinefg = nord.nord0_gui
 else
-	nord.cursorlinefg = nord.nord1_gui
+	nord.cursorlinefg = nord.nord0_gui_light
 end
 
 return nord
